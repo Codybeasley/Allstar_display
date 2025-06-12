@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allstar Sales Lineup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Allstar Sales Lineup</h1>
+        <div class="field">
+            <div class="diamond">
+                <div id="runner" class="runner hidden"></div>
+                <div class="base home"></div>
+                <div class="base first"></div>
+                <div class="base second"></div>
+                <div class="base third"></div>
+                <div class="pitcher">⚾</div>
+                <div class="batter">🥎</div>
+            </div>
+            <canvas id="confetti"></canvas>
+            <div id="overlay" class="overlay hidden"></div>
+        </div>
+        <div class="status retro-font">
+            <div id="atBat" class="atbat">At Bat: </div>
+            <div id="onDeck" class="ondeck">On Deck: </div>
+            <div id="inHole" class="inhole">In the Hole: </div>
+        </div>
+        <div class="controls">
+            <button id="strikeBtn">Strike Out</button>
+            <button id="homerunBtn">Home Run</button>
+        </div>
+        <div class="add-form hidden">
+            <input type="text" id="nameInput" placeholder="Add salesperson">
+            <button id="addBtn">Add</button>
+        </div>
+        <ul id="lineupList" class="lineup"></ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
