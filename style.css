@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background: #0b6623; /* dark green like a field */
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAEACAIAAABK8lkwAAAFA0lEQVR4nO3du00kQRRA0WWFyAJn0tgkcIiKUMiGFMgCaw0k1KzUq2qY/nHPsTCLxrh69eiZm4eHh18A9Pze+wAA7EMAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIEoAAKIEACBKAACiBAAgSgAAogQAIOr25c/L3meAIc9v93sfYcjj3eveR4AhJgCAKAEAiBIAgKjbvQ8A/xq56z/aPfv0zHPnP9qZwQQAECUAAFECABB1c3m67H0Gos54179U4XfkvEwAAFECABAlAABRdgBsyv/Iv/McOAITAECUAABECQBAlM8CYhXuuP9v7jl4bmzJBAAQJQAAUQIAEOU9AK7G/fV1eZ6szQQAECUAAFECABBlB8C3uKfehufMGkwAAFECABAlAABRPguIq3EfvZ7psx35nmEYYQIAiBIAgCgBAIiyA2Cx6R20e//tze0D/C1YygQAECUAAFECABBlB8AQ/3t+fPYBLGUCAIgSAIAoAQCIsgNgMffLx+EzgvgOEwBAlAAARAkAQJQdALPcKZ+XdwIYYQIAiBIAgCgBAIiyA2CIe+Tj804AS5kAAKIEACBKAACi7AD4xN3xz+OdAOaYAACiBAAgSgAAouwAmOW++Ly8E8AIEwBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAEDU7d4HALbz/Hb/8fPj3euOJ+EITAAAUQIAECUAAFF2ABDi3p8pEwBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlAAARAkAQJQAAEQJAECUAABECQBAlO8EZtbz2/3Hz75L9lymfzuYYwIAiBIAgCgBAIiyA+CT6V2/e+Sfwf6GOSYAgCgBAIgSAIAoOwCGeCfg+OxsWMoEABAlAABRAgAQZQfALO8EnJc9DSNMAABRAgAQJQAAUXYALOadgOOwm+E7TAAAUQIAECUAAFF2AAzxTsDx2cewlAkAIEoAAKIEACDKDoDF5vYB7qC34ZlzLSYAgCgBAIgSAIAoOwCuxt30erx7wRpMAABRAgAQJQAAUTeXp8veZ+CHmLuntg/4Gs+TtZkAAKIEACBKAACi7ABYhfvrr/Hc2JIJACBKAACiBAAgymcBsYq5O2t33O88B47ABAAQJQAAUQIAEOU9AHYz8hn3Z78TL/yOnJcJACBKAACiBAAgyg6AwznjvfkZzwwmAIAoAQCIEgCAKDsATmPknv0I3PVzFiYAgCgBAIgSAIAo3wfAaaxxtz7dK7i7p8YEABAlAABRAgAQZQdAmnt/ykwAAFECABAlAABRAgAQJQAAUQIAECUAAFECABAlAABRAgAQJQAAUX8BZ7evses64M0AAAAASUVORK5CYII=') no-repeat center center fixed;
+    background-size: cover;
+    image-rendering: pixelated;
     color: #fff;
     text-align: center;
     margin: 0;
@@ -80,14 +82,18 @@ h1 {
 
 .runner {
     position: absolute;
-    font-size: 1.5em;
+    width: 64px;
+    height: 64px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAA6ElEQVR4nO2aQQoCMRDAWvEz+//H7HPqVYsoujNNYZKbKG4I07pWWxORyvTVFxxnG5+e78dap9vKi+2IAWgBmnv0G35b47tRfgIMQAvQhO8BM/347fXzHpJ9X1B+AgxAC9BcXl9v1mwo43x9HL0nlJ8AA9ACNAagBWgMQAvQXP4uMH8uZ98XRFN+AgxAC9Ckn8EH7AmeB2RiAFqAJv1M8A/8bXAlBqAFaHbYA5b/R+GZ8hNgAFqAxgC0AI0BaAEaA9ACNAagBWgMQAvQGIAWoDEALUBjAFqAhjgTRM8AZ8pPgAFoARERkgdYpBSmEpdMqQAAAABJRU5ErkJggg==);
+    background-size: contain;
+    background-repeat: no-repeat;
     transform: rotate(-45deg);
     transition: all 0.8s linear;
 }
-
 .hidden {
     display: none;
 }
+
 
 .status {
     margin-top: 20px;
@@ -102,6 +108,7 @@ h1 {
 
 .add-form {
     margin-top: 20px;
+    display: none;
 }
 
 .lineup {
@@ -113,6 +120,7 @@ h1 {
 .lineup li {
     font-size: 1.5em;
     margin: 5px 0;
+    font-family: "Courier New", monospace;
 }
 
 .lineup .current {
@@ -131,4 +139,24 @@ canvas#confetti {
     width: 100%;
     height: 100%;
     pointer-events: none;
+}
+
+.retro-font {
+    font-family: "Courier New", monospace;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    pointer-events: none;
+    text-shadow: 2px 2px 0 #000;
 }

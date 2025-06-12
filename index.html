@@ -11,7 +11,7 @@
         <h1>Allstar Sales Lineup</h1>
         <div class="field">
             <div class="diamond">
-                <div id="runner" class="runner hidden">🏃</div>
+                <div id="runner" class="runner hidden"></div>
                 <div class="base home"></div>
                 <div class="base first"></div>
                 <div class="base second"></div>
@@ -20,16 +20,18 @@
                 <div class="batter">🥎</div>
             </div>
             <canvas id="confetti"></canvas>
+            <div id="overlay" class="overlay hidden"></div>
         </div>
-        <div class="status">
+        <div class="status retro-font">
             <div id="atBat" class="atbat">At Bat: </div>
             <div id="onDeck" class="ondeck">On Deck: </div>
+            <div id="inHole" class="inhole">In the Hole: </div>
         </div>
         <div class="controls">
             <button id="strikeBtn">Strike Out</button>
             <button id="homerunBtn">Home Run</button>
         </div>
-        <div class="add-form">
+        <div class="add-form hidden">
             <input type="text" id="nameInput" placeholder="Add salesperson">
             <button id="addBtn">Add</button>
         </div>

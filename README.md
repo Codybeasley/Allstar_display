@@ -4,9 +4,9 @@ This simple web app displays a rotating list of salespeople in a baseball themed
 
 ## Usage
 
-1. Open `index.html` in a web browser.
-2. Add salespeople with the input box if needed. By default the lineup is Sarah, Jacob, Shannon, Kaleb, Martin, Keith and Quinn.
+1. Open `index.html` in a web browser (fullscreen looks best).
+2. By default the lineup is Sarah, Jacob, Shannon, Kaleb, Martin, Keith and Quinn.
 3. Press **Home Run** or **Strike Out** as customers are helped.
 4. The current position and lineup are saved in your browser so the order is restored on the next visit.
 
-Fireworks appear on a home run and the batter slowly walks away on a strike out. The interface is designed to be visible from across the room.
+The display now uses a pixel-art baseball field background with a pixel runner circling the bases on a sale. Fireworks and large overlays mark the result. The add salesperson field is hidden but still functional if needed.

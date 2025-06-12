@@ -20,6 +20,7 @@ function saveState(lineup, index) {
 function render(lineup, index) {
     const atBatEl = document.getElementById('atBat');
     const onDeckEl = document.getElementById('onDeck');
+    const inHoleEl = document.getElementById('inHole');
     const listEl = document.getElementById('lineupList');
     listEl.innerHTML = '';
 
@@ -32,6 +33,8 @@ function render(lineup, index) {
         } else if (i === (index + 1) % lineup.length) {
             li.classList.add('next');
             onDeckEl.textContent = `On Deck: ${name}`;
+        } else if (i === (index + 2) % lineup.length) {
+            inHoleEl.textContent = `In the Hole: ${name}`;
         }
         listEl.appendChild(li);
     });
@@ -129,6 +132,16 @@ function fireworks() {
     })();
 }
 
+function showOverlay(text, color) {
+    const overlay = document.getElementById('overlay');
+    overlay.textContent = text;
+    overlay.style.backgroundColor = color || 'rgba(0,0,0,0.5)';
+    overlay.classList.remove('hidden');
+    setTimeout(() => {
+        overlay.classList.add('hidden');
+    }, 1500);
+}
+
 function strikeOutAnim(callback) {
     const batter = document.querySelector('.batter');
     batter.style.transition = 'transform 1s ease-out, opacity 1s';
@@ -147,12 +160,16 @@ window.addEventListener('DOMContentLoaded', () => {
     render(state.lineup, state.index);
 
     document.getElementById('strikeBtn').addEventListener('click', () => {
-        pitchBall(() => strikeOutAnim(() => moveNext(state)));
+        pitchBall(() => strikeOutAnim(() => {
+            showOverlay('STRIKEOUT!', 'rgba(255,0,0,0.7)');
+            moveNext(state);
+        }));
     });
 
     document.getElementById('homerunBtn').addEventListener('click', () => {
         pitchBall(() => runBases(() => {
             fireworks();
+            showOverlay('HOME RUN!', 'rgba(0,0,0,0.5)');
             moveNext(state);
         }));
     });
