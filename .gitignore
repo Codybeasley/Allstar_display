@@ -1,0 +1,10 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Log file generated at runtime
+trading_advisor.log
