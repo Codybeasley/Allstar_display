@@ -8,20 +8,56 @@ Edit this file to customize your watchlist, account settings, and analysis param
 # Add or remove tickers as you like.
 # ============================================================
 WATCHLIST = [
-    # High-volume mega-cap tech (liquid, tight spreads)
+    # ── Mega-cap tech (highest liquidity, tightest spreads) ──────────────
     "AAPL",   # Apple
     "MSFT",   # Microsoft
-    "NVDA",   # Nvidia
+    "NVDA",   # Nvidia  (AI chips)
     "GOOGL",  # Alphabet
     "AMZN",   # Amazon
     "META",   # Meta
-    # Volatile momentum names (larger moves, more opportunity)
+
+    # ── High-volatility momentum stocks (big daily moves) ─────────────────
     "TSLA",   # Tesla
     "AMD",    # Advanced Micro Devices
-    "PLTR",   # Palantir
-    # Market pulse ETFs
-    "SPY",    # S&P 500
-    "QQQ",    # Nasdaq 100
+    "PLTR",   # Palantir  (AI/data)
+    "COIN",   # Coinbase  (crypto-linked)
+    "MSTR",   # MicroStrategy  (bitcoin proxy)
+    "RIVN",   # Rivian  (EV)
+    "SOFI",   # SoFi Technologies
+    "HOOD",   # Robinhood Markets
+
+    # ── Mid-cap growth (more opportunity, moderate liquidity) ─────────────
+    "RBLX",   # Roblox
+    "SNAP",   # Snap
+    "UBER",   # Uber
+    "LYFT",   # Lyft
+    "DKNG",   # DraftKings  (sports betting)
+    "UPST",   # Upstart Holdings  (AI lending)
+    "AFRM",   # Affirm  (BNPL)
+    "IONQ",   # IonQ  (quantum computing)
+    "BBAI",   # BigBear.ai  (small-cap AI)
+    "SOUN",   # SoundHound AI  (small-cap AI)
+    "CIFR",   # Cipher Mining  (crypto mining)
+    "MARA",   # Marathon Digital  (crypto mining)
+    "CLSK",   # CleanSpark  (crypto mining)
+
+    # ── Biotech / small-cap (high risk, high reward) ──────────────────────
+    "SAVA",   # Cassava Sciences
+    "ACHR",   # Archer Aviation  (eVTOL)
+    "JOBY",   # Joby Aviation  (eVTOL)
+
+    # ── Market pulse ETFs (tells you overall market direction) ────────────
+    "SPY",    # S&P 500 ETF
+    "QQQ",    # Nasdaq 100 ETF
+    "IWM",    # Russell 2000  (small-cap index)
+    "SOXS",   # Semiconductor bear ETF  (3× inverse)
+    "TQQQ",   # Nasdaq 3× leveraged bull ETF
+
+    # ── ADD YOUR OWN below this line ──────────────────────────────────────
+    # Just add the ticker symbol in quotes with a comma, for example:
+    # "GME",    # GameStop
+    # "AMC",    # AMC Entertainment
+    # "BBBY",   # Bed Bath & Beyond
 ]
 
 # ============================================================
